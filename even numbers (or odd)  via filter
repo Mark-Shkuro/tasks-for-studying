@@ -1,0 +1,18 @@
+function getEvenNumbers(numbersArray) {
+    let evens = numbersArray.filter( function(elem) {
+        return elem % 2 == 0 || elem === 0;
+        
+    });
+
+    let odd = numbersArray.filter(function(elem) {
+        return elem % 2 !== 0;
+    });
+
+    return evens;
+}
+let arr = [-100, 11, 12, 13, 222, -300, 1, 0];
+let array = [];
+
+console.log(getEvenNumbers(arr));
+
+// Output even numbers from an array via the filter function 
