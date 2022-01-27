@@ -1,0 +1,9 @@
+function order(words) {
+  return words.split(' ').sort(compare).join(' ');
+}
+
+function compare(previous, next) {
+  return previous.match(/\d/) - next.match(/\d/)
+}
+
+console.log(order('Ear6th I1 3a citiz4en am2 o5f'));
