@@ -1,0 +1,20 @@
+let list1 = [
+  { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 35, language: 'Java' },
+  { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 35, language: 'Python' },
+];
+
+// function getAverageAge(list) {
+//   let count = 0;
+//   let length = list.length;
+//     for (let i = 0; i < length; i ++){
+//       count += list[i].age;
+//     }
+//     return Math.round(count / length);
+//   }
+
+
+function getAverageAge(list) {
+ return Math.round(list.reduce((sum, current) => sum + current.age , 0) / list.length);
+}
+
+console.log(getAverageAge(list1));
