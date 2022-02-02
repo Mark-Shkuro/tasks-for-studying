@@ -1,0 +1,38 @@
+function calculate(str) {
+  let array = str.split(' ');
+  let firstNumber = array[0];
+  let secondNumber = array[2];
+
+  console.log(typeof secondNumber);
+
+  checkArrayNumbers(array);
+ 
+    if (array[1] == '+') {
+      let plus = firstNumber + secondNumber;
+      return plus;
+    } else if(array[1] == '-') {
+      let minus = firstNumber - secondNumber;
+      return minus;
+    } else if(array[1] == '*') {
+      let multiply = firstNumber * secondNumber;
+     return multiply;
+    } else if(array[1] == '/') {
+      let division = firstNumber / secondNumber;
+      return Math.floor(division);
+  }
+}
+
+  console.log(calculate("2 * 2"));
+
+
+  
+
+  function checkArrayNumbers(array) {
+    for (let i = 0; i < array.length; i++){
+      if(array[i] == 0 || array[i] < 0 || array[i] > 10) {
+        throw new Error('The numbers have to be more than 0 and less than 10');
+      } else if (array.length >= 4) {
+        throw new Error('The string is able to have only 2 numbers');
+     }
+  }
+}
